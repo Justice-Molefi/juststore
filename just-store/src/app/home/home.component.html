@@ -1,5 +1,8 @@
 <div class="container">
     <app-navbar />
     <app-search-bar />
-    <app-products />
+    <app-products /> 
 </div>
+<div *ngIf="showLogin" class="login-container">
+    <app-login/>
+</div>   

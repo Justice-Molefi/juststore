@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
-  fakeList = new Array(26);
+  fakeList = new Array(3);
 }
