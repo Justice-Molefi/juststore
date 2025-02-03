@@ -5,7 +5,8 @@
     --font-color-primary: #4d4d4f;
     --grey: #4d4d4f;
     --dark-grey: #1c1c1c;
-    --secondary: rgb(63, 126, 253);
+    --secondary: rgb(38, 189, 0);
+    --secondary-dark: rgb(28, 141, 0);
 }
 
 *{

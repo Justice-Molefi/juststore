@@ -1,11 +1,11 @@
 <div class="container">
-    <app-navbar />
+    <app-navbar (showLoginEvent)="toggleLogin()" (showRegisterEvent)="toggleRegister()"/>
     <app-search-bar />
     <app-products /> 
 </div>
-<div *ngIf="showLogin" class="login-container">
-    <app-login/>
+<div *ngIf="loginFormToggled" class="login-container">
+    <app-login (closeLoginEvent)="toggleLogin()"/>
 </div>
-<div *ngIf="showRegister" class="register-container">
-    <app-register/>
+<div *ngIf="registerFormToggled" class="register-container">
+    <app-register (closeRegisterEvent)="toggleRegister()"/>
 </div>   

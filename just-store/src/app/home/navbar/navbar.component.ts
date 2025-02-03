@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCartShopping, faHeart } from '@fortawesome/free-solid-svg-icons';
 @Component({
@@ -11,4 +11,16 @@ import { faCartShopping, faHeart } from '@fortawesome/free-solid-svg-icons';
 export class NavbarComponent {
   faWishList = faHeart;
   faShoppingCart = faCartShopping;
+
+  @Output() showLoginEvent = new EventEmitter<boolean>();
+  @Output() showRegisterEvent = new EventEmitter<boolean>();
+
+
+  showLoginForm(){
+    this.showLoginEvent.emit(true);
+  }
+
+  showRegisterForm(){
+    this.showRegisterEvent.emit(true);
+  }
 }

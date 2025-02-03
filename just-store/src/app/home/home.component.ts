@@ -14,6 +14,14 @@ import { RegisterComponent } from "./register/register.component";
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  showLogin: boolean = false;
-  showRegister: boolean = true;  
+  loginFormToggled: boolean = false;
+  registerFormToggled: boolean = false;
+
+  toggleRegister(): void{
+    this.registerFormToggled = !this.registerFormToggled;
+  }
+
+  toggleLogin(): void{
+    this.loginFormToggled = !this.loginFormToggled;
+  }
 }
